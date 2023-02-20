@@ -1,0 +1,254 @@
+body {
+    margin: 0;
+    line-height: normal;
+  }
+  .minerva-mcgonagall-icon {
+    position: absolute;
+    top: 40px;
+    left: 121px;
+    width: 128px;
+    height: 103px;
+    object-fit: cover;
+  }
+
+  .rectangle-div {
+    position: absolute;
+    top: 138px;
+    left: 39px;
+    border-radius: 13px;
+    background-color: #f7f7f7;
+    width: 314px;
+    height: 77px;
+}
+
+
+
+
+  .rectangle-div1 {
+    position: absolute;
+    top: 216px;
+    left: 233px;
+    border-radius: var(--br-md);
+    background-color: var(--color-tan);
+    width: 118px;
+    height: 30px;
+  }
+  .answer-div {
+    position: absolute;
+    top: 182px;
+    left: 271px;
+    font-weight: 300;
+    display: inline-block;
+    width: 93px;
+    height: 11px;
+}
+  .circled-down-right {
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+    position: absolute;
+    top: 224px;
+    left: 301px;
+    width: 41px;
+    height: 18px;
+    background-image: url(./public/circleddownright@3x.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+  }
+  .find-quotes-here,
+  .frame-div {
+    text-align: left;
+    color: var(--color-black);
+    font-family: var(--font-inter);
+  }
+
+  .find-quotes-here {
+    border: 0;
+    background-color: transparent;
+    position: absolute;
+    top: 150px;
+    left: 52px;
+    font-size: 25px;
+    font-weight: 90;
+    display: inline-block;
+    width: 286px;
+    height: 50px;
+}
+
+
+
+
+
+  .frame-div {
+    position: relative;
+    background-color: var(--color-white);
+    width: 100%;
+    height: 274px;
+    overflow: hidden;
+    font-size: 16px;
+  }
+  
+  .minerva-mcgonagall-icon1 {
+    position: absolute;
+    top: 0;
+    left: 310px;
+    width: 222px;
+    height: 164px;
+    object-fit: cover;
+  }
+  .rectangle-div2 {
+    position: absolute;
+    top: 135px;
+    left: 0;
+    border-radius: 25px;
+    background-color: #45433b;
+    width: 854px;
+    height: 119px;
+  }
+  .rectangle-div3 {
+    position: absolute;
+    top: 193px;
+    left: 640px;
+    border-radius: var(--br-md);
+    background-color: var(--color-tan);
+    width: 200px;
+    height: 52px;
+  }
+  .answer-div1 {
+    position: absolute;
+    top: 204px;
+    left: 688px;
+    font-weight: 300;
+    display: inline-block;
+    width: 83px;
+    height: 19px;
+  }
+  .circled-down-right1,
+  .find-inspirationmotivation-in {
+    border: 0;
+    background-color: transparent;
+    position: absolute;
+  }
+  .circled-down-right1 {
+    cursor: pointer;
+    padding: 0;
+    top: 203px;
+    left: 768px;
+    width: 36px;
+    height: 31px;
+    background-image: url(./public/circleddownright1@3x.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+  }
+  .find-inspirationmotivation-in {
+    top: 154px;
+    left: 64px;
+    font-size: 25px;
+    font-weight: 300;
+    font-family: var(--font-inter);
+    color: var(--color-black);
+    text-align: left;
+    display: inline-block;
+    width: 779px;
+    height: 41px;
+    cursor: text;
+  }
+  .right-button-icon {
+    position: absolute;
+    top: 152px;
+    left: 6px;
+    width: 65px;
+    height: 38px;
+    object-fit: cover;
+  }
+  .group-div {
+    position: absolute;
+    top: 105px;
+    left: 400px;
+    width: 854px;
+    height: 254px;
+  }
+  .frame-div1 {
+    position: relative;
+    background-color: var(--color-white);
+    width: 100%;
+    height: 1241px;
+    overflow: hidden;
+    text-align: left;
+    font-size: 22px;
+    color: var(--color-black);
+    font-family: var(--font-inter);
+  }
+  @media screen and (max-width: 1200px) {
+    .rectangle-div2:hover {
+      background-color: #ddd5b7;
+    }
+    .find-inspirationmotivation-in:hover {
+      animation: 1s ease 0s infinite normal none shadow-pop-tr;
+      opacity: 1;
+    }
+    @keyframes shadow-pop-tr {
+      0% {
+        box-shadow: 0 0 rgba(62, 62, 62, 0.18), 0 0 rgba(62, 62, 62, 0.18),
+          0 0 rgba(62, 62, 62, 0.18), 0 0 rgba(62, 62, 62, 0.18),
+          0 0 rgba(62, 62, 62, 0.18), 0 0 rgba(62, 62, 62, 0.18),
+          0 0 rgba(62, 62, 62, 0.18), 0 0 rgba(62, 62, 62, 0.18);
+        transform: translateX(0) translateY(0);
+      }
+      to {
+        box-shadow: 1px -1px rgba(62, 62, 62, 0.18),
+          2px -2px rgba(62, 62, 62, 0.18), 3px -3px rgba(62, 62, 62, 0.18),
+          4px -4px rgba(62, 62, 62, 0.18), 5px -5px rgba(62, 62, 62, 0.18),
+          6px -6px rgba(62, 62, 62, 0.18), 7px -7px rgba(62, 62, 62, 0.18),
+          8px -8px rgba(62, 62, 62, 0.18);
+        transform: translateX(-8px) translateY(8px);
+      }
+    }
+  }
+  @media screen and (max-width: 350px) {
+    .find-inspirationmotivation-in:hover {
+      animation: 1s ease 0s infinite normal none shadow-pop-tr;
+      opacity: 1;
+    }
+    @keyframes shadow-pop-tr {
+      0% {
+        box-shadow: 0 0 rgba(62, 62, 62, 0.18), 0 0 rgba(62, 62, 62, 0.18),
+          0 0 rgba(62, 62, 62, 0.18), 0 0 rgba(62, 62, 62, 0.18),
+          0 0 rgba(62, 62, 62, 0.18), 0 0 rgba(62, 62, 62, 0.18),
+          0 0 rgba(62, 62, 62, 0.18), 0 0 rgba(62, 62, 62, 0.18);
+        transform: translateX(0) translateY(0);
+      }
+      to {
+        box-shadow: 1px -1px rgba(62, 62, 62, 0.18),
+          2px -2px rgba(62, 62, 62, 0.18), 3px -3px rgba(62, 62, 62, 0.18),
+          4px -4px rgba(62, 62, 62, 0.18), 5px -5px rgba(62, 62, 62, 0.18),
+          6px -6px rgba(62, 62, 62, 0.18), 7px -7px rgba(62, 62, 62, 0.18),
+          8px -8px rgba(62, 62, 62, 0.18);
+        transform: translateX(-8px) translateY(8px);
+      }
+    }
+  }
+  
+
+
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #ffffff;
+    padding: 20px;
+    margin: auto;
+  }
+  
+  .love {
+    color: #e25555;
+  }
+  
+  img {
+    height: 30px;
+    margin-left: 10px;
+}

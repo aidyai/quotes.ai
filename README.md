@@ -1,2 +1,4 @@
-# QUOTES
-A Semantic Search Built on Sentence Transformers for Searching out any Quote from anybody
+# quotes.ai
+A Quotes search engine powered by Sentence Transformers
+
+<img src="https://github.com/aidyai/quotes.ai/blob/main/static/img/background.png" alt="" align=center>
