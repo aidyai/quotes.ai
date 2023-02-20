@@ -1,15 +1,14 @@
 FROM python:3.8-slim
 
-WORKDIR /backEnd
+WORKDIR /backend
 
-COPY ./requirements.txt /backEnd/requirements.txt
+COPY ./requirements.txt /backend/requirements.txt
 
-RUN pip install --no-cache-dir --upgrade -r /backEnd/requirements.txt
+RUN pip install --no-cache-dir --upgrade -r /backend/requirements.txt
 
-COPY ./data_store  /backEnd/data_store
-COPY ./src  /backEnd/src
+COPY ./data_store  /backend/data_store
+COPY ./src  /backend/src
 
 
-
-CMD ["uvicorn", "src.main:app", "--host", "0.0.0.0" ,"--port", "10000"]
-
+EXPOSE 1000
+CMD ["python", "server.py"]

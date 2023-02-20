@@ -1,21 +1,15 @@
+from src.Libraries import *
 
 
+### FUNCTIONS NEEDED
+def DATAFRAME(csv_file:str):
+    df = pd.read_csv("csv_file")
+       
+    ### DATA CLEANING
+    df = df.fillna('')
+    return df
 
 
-def loader():
-    df = ""
-    index = ""
-    moel = ""
-    return df, index, model
-
-
-
-def vector_search():
-    return
-
-df = read_df('C:/Users/user/Desktop/BACKEND/quotes.ai/data/quotes_main.csv')
-df = df.to_dict()  
-return df
 
 ### FUNCTIONS NEEDED
 def vector_search(query, model, index, num_results=10):
@@ -41,7 +35,7 @@ def id2details(df, I, column):
     return [list(df[df.ID == idx][column]) for idx in I[0]]
 
 
-def load_faiss_index(path_to_faiss="models/faiss_index.pickle"):
+def faiss_index(path_to_faiss="models/faiss_index.pickle"):
     """Load and deserialize the Faiss index."""
     with open(path_to_faiss, "rb") as h:
         data = pickle.load(h)
