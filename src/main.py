@@ -1,32 +1,35 @@
 import os
-from src.Libraries import *
+import pathlib
 
-from src.utils import id2details, vector_search, faiss_index, DATAFRAME
+#from src.Libraries import *
+
+#from src.utils import id2details, vector_search, faiss_index, DATAFRAME
 import pickle
 import uvicorn
 from typing import Optional
 from fastapi import FastAPI, File, UploadFile, Request
 from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
+from fastapi.responses import HTMLResponse
 
 
 
 BASE_DIR = pathlib.Path(__file__).parent
-df = pd.read_csv(BASE_DIR/"")
+#df = pd.read_csv(BASE_DIR/"")
 
 
 app = FastAPI()
 
-app.mount("/static", StaticFiles(directory="static"), name="static")
-templates = Jinja2Templates(directory="templates")
+app.mount("/static", StaticFiles(directory=BASE_DIR/"static"), name="static")
+templates = Jinja2Templates(directory=BASE_DIR/"templates")
 
 
 ### IMPORTANT VARIABLES
 
 
-df = DATAFRAME(df)
-model = SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2')
-index = faiss_index("/notebooks/qqq.ai/src/faiss/index.pkl")
+#df = DATAFRAME(df)
+#model = SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2')
+#index = faiss_index("/notebooks/qqq.ai/src/faiss/index.pkl")
 
 
 
@@ -36,34 +39,33 @@ async def home(request: Request):
 
 
 
-async def search(query:str, request: Request):
-    query = request.query_params.get("query")
+
+@app.get("/search", response_class=HTMLResponse)
+async def search(request: Request,):
+    #query = request.query_params.get("query")
+
     
-    ### MAIN SEARCH ENGINE 
-    D, I = vector_search([query], model, index, num_results=1000)
-
-    # Fetching Results
-    results = id2details(df, I, 'Quote')
-    new_results = [str for sublist in results for str in sublist]
-
-    # Create a boolean mask that returns True for rows that match the list
-    search_result = list(set(new_results))
-    mask = df['Quote'].isin(search_result)
-    # Use the mask to index the dataframe and convert the result to a dictionary
-    result = df[mask].to_dict()
-    # Get the indices from the first value of the dictionary
-    indices = list(result.values())[0].keys()
+    Authors = [
     
-    Author = []
-    Quotes = []
+    'A pen, a piece of white paper, and an idea can create a new you.', \
+    'The principle virtue of anyone who made an important invention is curious persistence.', 
+    'To grow the power of an imagination, travel to see the world.', 
+    'There were also the Masters of Arcane Knowledge. Everyone begrudged their presence among the gifteds. These were the kids that could break down an engine and build it back again - no diagrams or instructions needed. They understood things in a real, not theoretical, way. They seemed not to care about their grades.', 
+    "Knowledgeable [10w] The knowledgeable man inventoried and catalogued everything he doesn't know.", 
+    "The Phenomenon of Life {Couplet} The potter's some man of clay who's molding clay,a robot making an automaton;Every day we recreate ourselves from what bricks we're made,how wondrous life's phenomenon!"
+    
+    ]
+    
+       
+    Quotes = [
+    
+    'A pen, a piece of white paper, and an idea can create a new you.', 
+    'The principle virtue of anyone who made an important invention is curious persistence.', 
+    'To grow the power of an imagination, travel to see the world.', 
+    'There were also the Masters',
 
-
-    for index in indices:
-        Author.append(result['Author'][index])
-        Quotes.append(result['Quote'][index]) 
-
-
-    return templates.TemplateResponse("search.html", {"query": query, 
+    ]
+    return templates.TemplateResponse("search.html", {
                                                       "request": request, 
-                                                      "Author": Author,
-                                                      "Quote": Quotes, })
+                                                      "Authors": Authors,
+                                                      "Quotes": Quotes, })

@@ -30,188 +30,42 @@
       <div class="rectangle-div"></div>
       <div class="rectangle-div1"></div>
       <button type="submit" class="circled-down-right"></button>
-      <input class="find-quotes-here" type="text" name="query" placeholder="Find Quotes Here...."/>
+      <input class="find-quotes-here" type="text" name="query" value="{{ search_query }}" placeholder="Find Quotes Here...."/>
     </div>
   </form>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
   <div class="cards">
 
 
+
+
+
+    {% block content %}
+
+
+        {% for i in range(1000) %}
+          <div class="card card-1">
+            <p class="card__exit">
+              <img src="{{ url_for('static', path='img/quote1.png')}}" alt="">
+            </p>
+            <div class="card__icon"><span></span></div>
+            <div class="results-div">
+              {{ Authors[i] }}
+            </div>
+            <div class="sub-div">
+              {{ Quotes[i] }}
+            </div>
+            <p class="card__xit">
+              <img src="{{ url_for('static', path='img/quote32.png')}}" alt="">
+            </p>  
+          </div>
+        {% endfor %}
+
       
-      <div class="card card-1">
-        <p class="card__exit">
-          <img src="{{ url_for('static', path='img/quote1.png')}}" alt="">
-        </p>
-        <div class="card__icon"><span></span></div>
-        <div class="results-div">
-          Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit 
-          amet, consectetur adipiscing elit. Lorem ipsum dolor sit ame  amet, consectetur a
-        </div>
-        <div class="sub-div">
-          Sub Text
-        </div>
-        <p class="card__xit">
-          <img src="{{ url_for('static', path='img/quote32.png')}}" alt="">
-        </p>  
-      </div>
+    {% endblock content %}
 
 
-      <div class="card card-1">
-        <p class="card__exit">
-          <img src="{{ url_for('static', path='img/quote1.png')}}" alt="">
-        </p>
-        <div class="card__icon"><span></span></div>
-        <div class="results-div">
-          Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit 
-          amet, consectetur adipiscing elit. Lorem ipsum dolor sit ame  amet, consectetur a
-        </div>
-        <div class="sub-div">
-          Sub Text
-        </div>
-        <p class="card__xit">
-          <img src="{{ url_for('static', path='img/quote32.png')}}" alt="">
-        </p>  
-      </div>
-
-
-      <div class="card card-1">
-        <p class="card__exit">
-          <img src="{{ url_for('static', path='img/quote1.png')}}" alt="">
-        </p>
-        <div class="card__icon"><span></span></div>
-        <div class="results-div">
-          Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit 
-          amet, consectetur adipiscing elit. Lorem ipsum dolor sit ame  amet, consectetur a
-        </div>
-        <div class="sub-div">
-          Sub Text
-        </div>
-        <p class="card__xit">
-          <img src="{{ url_for('static', path='img/quote32.png')}}" alt="">
-        </p>  
-      </div>
-
-      <div class="card card-1">
-        <p class="card__exit">
-          <img src="{{ url_for('static', path='img/quote1.png')}}" alt="">
-        </p>
-        <div class="card__icon"><span></span></div>
-        <div class="results-div">
-          Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit 
-          amet, consectetur adipiscing elit. Lorem ipsum dolor sit ame  amet, consectetur a
-        </div>
-        <div class="sub-div">
-          Sub Text
-        </div>
-        <p class="card__xit">
-          <img src="{{ url_for('static', path='img/quote32.png')}}" alt="">
-        </p>  
-      </div>
-
-
-      <div class="card card-1">
-        <p class="card__exit">
-          <img src="{{ url_for('static', path='img/quote1.png')}}" alt="">
-        </p>
-        <div class="card__icon"><span></span></div>
-        <div class="results-div">
-          Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit 
-          amet, consectetur adipiscing elit. Lorem ipsum dolor sit ame  amet, consectetur a
-        </div>
-        <div class="sub-div">
-          Sub Text
-        </div>
-        <p class="card__xit">
-          <img src="{{ url_for('static', path='img/quote32.png')}}" alt="">
-        </p>  
-      </div>
-
-      <div class="card card-1">
-        <p class="card__exit">
-          <img src="{{ url_for('static', path='img/quote1.png')}}" alt="">
-        </p>
-        <div class="card__icon"><span></span></div>
-        <div class="results-div">
-          Lorem ipsum dolor sit amet, consectetur Lorem 
-          Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit 
-          amet, consectetur adipiscing elit. Lorem ipsum dolor sit ame  amet, consectetur a
-          Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit 
-          amet, consectetur adipiscing elit. Lorem ipsum dolor sit ame  amet, consectetur a
-          
-          Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit 
-          amet, consectetur adipiscing elit. Lorem ipsum dolor sit ame  amet, consectetur aipsum dolor sit 
-          amet, consectetur adipiscing elit. Lorem ipsum dolor sit ame  amet, consectetur a
-        </div>
-        <div class="sub-div">
-          Sub Text
-        </div>
-        <p class="card__xit">
-          <img src="{{ url_for('static', path='img/quote32.png')}}" alt="">
-        </p>  
-      </div>
-
-      <div class="card card-1">
-        <p class="card__exit">
-          <img src="{{ url_for('static', path='img/quote1.png')}}" alt="">
-        </p>
-        <div class="card__icon"><span></span></div>
-        <div class="results-div">
-          Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit 
-          amet, consectetur adipiscing elit. Lorem ipsum dolor sit ame  amet, consectetur a
-          Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit 
-          amet, consectetur adipiscing elit. Lorem ipsum dolor sit ame  amet, consectetur a
-          Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit 
-          amet, consectetur adipiscing elit. Lorem ipsum dolor sit ame  amet, consectetur a
-        </div>
-        <div class="sub-div">
-          Sub Text
-        </div>
-        <p class="card__xit">
-          <img src="{{ url_for('static', path='img/quote32.png')}}" alt="">
-        </p>  
-      </div>
-
-      <div class="card card-1">
-        <p class="card__exit">
-          <img src="{{ url_for('static', path='img/quote1.png')}}" alt="">
-        </p>
-        <div class="card__icon"><span></span></div>
-        <div class="results-div">
-          Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit 
-          amet, consectetur adipiscing elit. Lorem ipsum dolor sit ame  amet, consectetur a
-          Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit 
-          amet, consectetur adipiscing elit. Lorem ipsum dolor sit ame  amet, consectetur a
-          Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit 
-          amet, consectetur adipiscing elit. Lorem ipsum dolor sit ame  amet, consectetur a
-          Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit 
-          amet, consectetur adipiscing elit. Lorem ipsum dolor sit ame  amet, consectetur a
-          Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit 
-          amet, consectetur adipiscing elit. Lorem ipsum dolor sit ame  amet, consectetur a
-          Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit 
-          amet, consectetur adipiscing elit. Lorem ipsum dolor sit ame  amet, consectetur a
-        </div>
-        <div class="sub-div">
-          Sub Text
-        </div>
-        <p class="card__xit">
-          <img src="{{ url_for('static', path='img/quote24.png')}}" alt="">
-        </p>  
-      </div>
 
 
   </div> 
