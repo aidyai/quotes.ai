@@ -35,48 +35,65 @@
   </form>
 
 
+  <div id="loader" class="spinner"></div>
+
+
+
+
+
   <div class="cards">
 
+    <!-- Add spinner element here -->
 
-
+  
 
 
     {% block content %}
 
-
-        {% for i in range(1000) %}
-          <div class="card card-1">
-            <p class="card__exit">
-              <img src="{{ url_for('static', path='img/quote1.png')}}" alt="">
-            </p>
-            <div class="card__icon"><span></span></div>
-            <div class="results-div">
-              {{ Authors[i] }}
-            </div>
-            <div class="sub-div">
-              {{ Quotes[i] }}
-            </div>
-            <p class="card__xit">
-              <img src="{{ url_for('static', path='img/quote32.png')}}" alt="">
-            </p>  
+      {% for i in range(50) %}
+        <div class="card card-1{% if i >= 10 %} hidden{% endif %}">
+          <p class="card__exit">
+            <img src="{{ url_for('static', path='img/quote1.png')}}" alt="">
+          </p>
+          <div class="card__icon"><span></span></div>
+          <div class="results-div">
+            {{ Authors[i] }}
           </div>
-        {% endfor %}
+          <div class="sub-div">
+            {{ Quotes[i] }}
+          </div>
+          <p class="card__xit">
+            <img src="{{ url_for('static', path='img/quote24.png')}}" alt="">
+          </p>  
+        </div>
+      {% endfor %}
 
-      
     {% endblock content %}
+    <div id="loaader" class="sspinner">
+      <div class="sspinner-icon"></div>
+    </div>
 
+
+
+
+
+
+    
 
 
 
   </div> 
   
-      
+
 
 
 <script src="{{ url_for('static', path='js/jquery.js') }}"></script>
 <script src="{{ url_for('static', path='js/popper.js') }}"></script>
 <script src="{{ url_for('static', path='js/bootstrap.js') }}"></script>
 <script src="{{ url_for('static', path='js/fontawesome.js') }}"></script>
+
+<!-- Import loading-animation.js -->
+<script src="{{ url_for('static', path='js/loader.js') }}"></script>
 
 </body>
 </html>

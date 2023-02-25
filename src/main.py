@@ -47,7 +47,7 @@ async def search(request: Request,):
     
     Authors = [
     
-    'A pen, a piece of white paper, and an idea can create a new you.', \
+    '##A pen, a piece of white paper, and an idea can create a new you.', \
     'The principle virtue of anyone who made an important invention is curious persistence.', 
     'To grow the power of an imagination, travel to see the world.', 
     'There were also the Masters of Arcane Knowledge. Everyone begrudged their presence among the gifteds. These were the kids that could break down an engine and build it back again - no diagrams or instructions needed. They understood things in a real, not theoretical, way. They seemed not to care about their grades.', 
@@ -59,10 +59,16 @@ async def search(request: Request,):
        
     Quotes = [
     
-    'A pen, a piece of white paper, and an idea can create a new you.', 
-    'The principle virtue of anyone who made an important invention is curious persistence.', 
-    'To grow the power of an imagination, travel to see the world.', 
-    'There were also the Masters',
+    'A pen.', 
+    'curious.', 
+    'To grow ',
+    'Oliver Wendell Holmes, Jr.', 
+    'Masters',
+    "piece of ",
+    "white paper", 
+    "an idea", 
+    "can create", 
+    "a new yo",
 
     ]
     return templates.TemplateResponse("search.html", {
