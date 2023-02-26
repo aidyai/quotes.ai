@@ -6,7 +6,7 @@ def DATAFRAME(csv_file:str):
     df = pd.read_csv("csv_file")
        
     ### DATA CLEANING
-    df = df.fillna('')
+    df = df.fillna('')   #recieves a csv file
     return df
 
 
