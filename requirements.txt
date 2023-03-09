@@ -22,5 +22,5 @@ idna
 pydantic
 h11
 click
-
+typing_extensions
 sentence-transformers
