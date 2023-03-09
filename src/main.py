@@ -8,7 +8,8 @@ import pickle
 import uvicorn
 from typing import Optional
 from fastapi import FastAPI, File, UploadFile, Request
-from fastapi.templating import Jinja2Templates
+#from fastapi.templating import Jinja2Templates
+from starlette.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import HTMLResponse
 
