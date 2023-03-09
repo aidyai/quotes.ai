@@ -19,7 +19,6 @@ certifi
 starlette
 urllib3
 idna
-Jinja2
 pydantic
 h11
 click
