@@ -16,6 +16,7 @@ torch
 torchvision
 tqdm
 certifi
+starlette
 urllib3
 idna
 pydantic
